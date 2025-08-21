@@ -3,7 +3,7 @@ functions = "/functions"
 command = "npm run"
 
 [[redirects]]
-  from = "dashboard"
+  from = "/"
   to = "/.netlify/functions/dashboard"
 
 [[redirects]]
