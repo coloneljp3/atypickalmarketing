@@ -1,0 +1,19 @@
+[build]
+functions = "/functions"
+command = "npm run"
+
+[[redirects]]
+  from = "dashboard"
+  to = "/.netlify/functions/dashboard"
+
+[[redirects]]
+  from = "login"
+  to = "/.netlify/functions/login"
+[[redirects]]
+  from = "signup"
+  to = "/.netlify/functions/signup"
+
+[[redirects]]
+  from = "/data"
+  to = "/.netlify/functions/data"
+  
