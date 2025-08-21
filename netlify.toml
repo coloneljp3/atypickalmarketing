@@ -7,7 +7,7 @@ command = "npm run"
   to = "/.netlify/functions/dashboard"
 
 [[redirects]]
-  from = "login"
+  from = "/login"
   to = "/.netlify/functions/login"
 [[redirects]]
   from = "signup"
@@ -17,3 +17,12 @@ command = "npm run"
   from = "/data"
   to = "/.netlify/functions/data"
   
+[[headers]]
+  for = ".netlify/functions/login"
+  [headers.values]
+   Content-Type = "application/json"
+   Key = "Content-Type"
+   Value = "application/json"
+[functions]
+  external_node_modules = ["express"]
+  node_bundler = "esbuild"
