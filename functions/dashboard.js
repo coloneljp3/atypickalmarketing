@@ -68,6 +68,6 @@ function accessPageInfo(id,url,search_query){
 
 <div id = "display_section">
     
-</div>`)}
+</div>`)})
 
 module.exports.handler = serverless(app)
