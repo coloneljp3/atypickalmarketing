@@ -4,6 +4,7 @@
   "homepage": "https://coloneljp3.github.io/CPM",
   "private": true,
   "dependencies": {
+    "body-parser":"2.2.0",
     "aws-cdk-lib":"2.176.0",
     "body-parser":"2.2.0",
     "aws-cdk":"2.177.0",
