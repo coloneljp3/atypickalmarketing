@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "aws-cdk-lib":"2.176.0",
+    "body-parser":"2.2.0",
     "aws-cdk":"2.177.0",
     "@aws-cdk/aws-lambda-nodejs":"1.204.0",
     "@netlify/planetscale": "^1.0.0",
