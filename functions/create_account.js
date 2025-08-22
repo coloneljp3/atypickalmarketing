@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 var config = {username:"if0_39396345 ",password:"4tOjlR3DNfnec",database:"if0_39396345_atypickal_marketing",host:"sql300.infinityfree.com"}
 app.use('/',(req,res)=>{
+res.send(req.body.username,req.body.psw)
 var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
