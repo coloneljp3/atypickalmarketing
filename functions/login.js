@@ -13,7 +13,7 @@ res.send(req.body.login)
   
 })
 
-
+app.use("/login",router)
 module.exports.handler = serverless(app)
 //  res.send(`<div class="alert-item" id="account-forms" style="z-index: 3; opacity: 0.8; background-color: rgb(75, 85, 118); width: 100%; height: 100%; position: fixed; color: white; text-align: center; top: 0px;visibility:visible">
 //<span style="float:left;font-size:20px;font-family:Raleway;font-weight:bold" onclick="document.getElementById('account-forms').style.visibility = 'hidden'">X</span>
