@@ -17,6 +17,6 @@ conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND pasword = ?`,[u
 
 })})
 
-app.use('/.netlify/functions/login_sub',router)
+app.use('/.netlify/functions/create_account',router)
 
 module.exports.handler = serverless(app)
