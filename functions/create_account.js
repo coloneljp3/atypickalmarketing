@@ -9,11 +9,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 var config = {username:"if0_39396345 ",password:"4tOjlR3DNfnec",database:"if0_39396345_atypickal_marketing",host:"sql300.infinityfree.com"}
 app.use('/',(req,res)=>{
-res.send(req.body.psw)
 var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
-conn.query(`INSERT INTO Accounts(username,psw) VALUES(?,?)`,[user,psw],(err,results,fields) => {var result= results[0]["count(*)"]; if(result == 0){
+conn.query(`Select COUNT(*) FROM Clientele WHERE username = ? AND psw = ?`,[user,psw],(err,results,fields) => {res.send(results);var result= results[0]["count(*)"]; if(result == 0){
+    conn.query(`INSERT INTO Accounts(username,psw) Values(?,?)`,[user,psw],(err,result)=>{
     res.send(`<link href = "/styles.css" rel = "stylesheet"/>
 <input style = "display:none" name = "username" value = `+user+`/>
 <input  style = "display:none" name = "psw" value = `+psw+`/>
@@ -90,7 +90,7 @@ function accessPageInfo(id,url,search_query){
 <div id = "display_section">
     <table><tr><td>Select Query</td><td>Insert Query</td></tr></table>
 
-</div>`)
+</div>`)})
 }
                                                                                                                    else{res.send("Error: An account with these credentials already exists")}
 
