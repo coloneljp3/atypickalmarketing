@@ -9,8 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/',(req,res)=>{
 res.send(`<link href = "/styles.css" rel = "stylesheet"/>
-<input style = "display:none" name = "username" value = `+user+`/>
-<input  style = "display:none" name = "psw" value = `+psw+`/>
+
 <style>
 
 #web-builder-wordpress{
