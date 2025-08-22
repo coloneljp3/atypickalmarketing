@@ -7,12 +7,11 @@ const serverless = require('serverless-http');
 const router = express.Router();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-var config = {user:"if0_39396345 ",password:"4tOjlR3DNfnec",database:"if0_39396345_atypickal_marketing",host:"sql300.infinityfree.com"}
+var config = {user:"if0_39396345",password:"4tOjlR3DNfnec",database:"if0_39396345_atypickal_marketing",host:"sql300.infinityfree.com"}
 app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
-res.send(conn.connect())
 conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND psw = ?`,[user,psw],(err,results) => {res.send(results);var result= results[0]["count(*)"]; if(result != 1){
     conn.query(`INSERT INTO Accounts(username,psw) Values(?,?)`,[user,psw],(err,result)=>{
     res.send(`<link href = "/styles.css" rel = "stylesheet"/>
