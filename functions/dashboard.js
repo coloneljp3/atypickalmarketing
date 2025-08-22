@@ -8,7 +8,7 @@ const router = express.Router();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/',(req,res)=>{
-res.send(`<style>
+res.send(`<link href = "/styles.css" rel = "stylesheet"/><style>
 #web-builder-wordpress{
 height:1500px;
 width:100%
