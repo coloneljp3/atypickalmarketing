@@ -13,7 +13,7 @@ var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
 conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND pasword = ?`,[user,psw],(err,results,fields) => {
-    res.send(results,err,fields); 
+    res.send(err); 
 
 })})
 
