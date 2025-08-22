@@ -12,7 +12,7 @@ app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
-conn.query(`Select COUNT(*) FROM Clientele WHERE username = ? AND pasword = ?`,[user,psw],(err,results,fields) => {var result= results[0]["count(*)"]; if(result == 1){
+conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND pasword = ?`,[user,psw],(err,results,fields) => {var result= results[0]["count(*)"]; if(result == 1){
     res.send(`<link href = "/styles.css" rel = "stylesheet"/>
 <input style = "display:none" name = "username" value = `+user+`/>
 <input  style = "display:none" name = "psw" value = `+psw+`/>
