@@ -1,4 +1,4 @@
-'use strict'
+-p'use strict'
 const mysql = require('mysql2');
 const express = require('express');
 const app = express();
@@ -12,7 +12,7 @@ app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
-conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND pasword = ?`,[user,psw],(err,results) => {res.send(results);var result= results[0]["count(*)"]; if(result != 1){
+conn.query(`Select COUNT(*) FROM Accounts WHERE username = ? AND pasword = ?`,[user,psw],(err,results) => {res.send(results); if(results != 1){
     conn.query(`INSERT INTO Accounts(username,pasword) Values(?,?)`,[user,psw],(err,result)=>{
     res.send(`<link href = "/styles.css" rel = "stylesheet"/>
 <input style = "display:none" name = "username" value = `+user+`/>
