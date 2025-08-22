@@ -8,10 +8,20 @@ const router = express.Router();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/',(req,res)=>{
-res.send(`<link href = "/styles.css" rel = "stylesheet"/><style>
+res.send(`<link href = "/styles.css" rel = "stylesheet"/>
+<input style = "display:none" name = "username" value = `+user+`/>
+<input  style = "display:none" name = "psw" value = `+psw+`/>
+<style>
+
 #web-builder-wordpress{
 height:1500px;
 width:100%
+}
+
+.table_information{
+    border-style:solid;
+    border-color:green;
+    
 }
     
 </style>
@@ -28,25 +38,29 @@ function accessPageInfo(id,url,search_query){
 }
     
 </script>
+
+<div class="sub-hiring-forms"><h2 class="sub-hiring-form-headers">Phone Number</h2><label class="hiring-label">Please type below...</label><input class="hiring-inputs" placeholder="Please type in..."></div>
+
 <form onsubmit = "" action = "/create-page" method = "POST">
-<input placeholder = "Type in the name of the project" name = "project_name"/>
-<input placeholder = "Type in the email you want for your paypal account" name = ""/>
-<input placeholder = "Type in the password you want for your paypal account"/>
-<input placeholder = "Type in the name you want for your database"/>
-<input placeholder = "Type in the name you want for your clients table"/>
-<input placeholder = "Type in the name you want for your cookies table"/>
-<input placeholder = "Type in the primary font you want for your page"/>
-<input placeholder = "Type in the secondary font you want for your page"/>
-<label for = "Do you want cookies in your website?"><input type = "checkbox"/>
-<input placeholder = "What do you want the title for your website to be?"/>
-<input placeholder = "How many years has your business existed?"/>
-<input placeholder = "Describe your business in synonyms(ex. metalworking, labor, teaching, etc.)..."/>
-<input placeholder = "Where is your business located"/>
-<input placeholder = "How long has your business been open?"/>
-<input placeholder = "How many vertical sections do you want the page to be divided into"/>
-<input placeholder = "How many horizontal sections do you want in each vertical section">
-<input placeholder = "Do you want email enabled?">
-<input placeholder = "Do you want payment enabled?">
+    
+<input class = "hiring-inputs" placeholder = "Type in the name of the project" name = "project_name"/>
+<input class = "hiring-inputs" placeholder = "Type in the email you want for your paypal account" name = ""/>
+<input class = "hiring-inputs" placeholder = "Type in the password you want for your paypal account"/>
+<input class = "hiring-inputs" placeholder = "Type in the name you want for your database"/>
+<input class = "hiring-inputs" placeholder = "Type in the name you want for your clients table"/>
+<input class = "hiring-inputs" placeholder = "Type in the name you want for your cookies table"/>
+<input class = "hiring-inputs" placeholder = "Type in the primary font you want for your page"/>
+<input class = "hiring-inputs" placeholder = "Type in the secondary font you want for your page"/>
+<label  for = "Do you want cookies in your website?"><input type = "checkbox"/>
+<input class = "hiring-inputs" placeholder = "What do you want the title for your website to be?"/>
+<input class = "hiring-inputs" placeholder = "How many years has your business existed?"/>
+<input class = "hiring-inputs" placeholder = "Describe your business in synonyms(ex. metalworking, labor, teaching, etc.)..."/>
+<input class = "hiring-inputs"  placeholder = "Where is your business located"/>
+<input class = "hiring-inputs" placeholder = "How long has your business been open?"/>
+<input class = "hiring-inputs" placeholder = "How many vertical sections do you want the page to be divided into"/>
+<input class = "hiring-inputs" placeholder = "How many horizontal sections do you want in each vertical section">
+<input class = "hiring-inputs" placeholder = "Do you want email enabled?">
+<input class = "hiring-inputs" placeholder = "Do you want payment enabled?">
 </form>
 <input placeholder= "Products you want to discuss in each section of the page" type = "search"/>
 <input placeholder= "Services you want to discuss in each section of the page" type = "search"/>
@@ -54,11 +68,12 @@ function accessPageInfo(id,url,search_query){
 
 <table>
     <tr>
-<td class = "table_information"><p>Clients Table</p></td>
-<td class = "table_information"><p>Records Table</p></td>
-<td class = "table_information"><p>Website Data</p></td>
-<td class = "table_information"> <p>Products for the Company</p> </td>
-<td class = "table_information"> <p>Website Tracker</p> </td>
+<td class = "table_information"><button onclick = "accessPageInfo('','','?mysql_query=clients')">Clients Table</button></td>
+<td class = "table_information"><button onclick = "accessPageInfo('','','?mysql_query=clients')">Records Table</button>
+</td>
+<td class = "table_information"><button onclick = "accessPageInfo('','','?mysql_query=clients')">Website Data</button></td>
+<td class = "table_information"> <button onclick = "accessPageInfo('','','?mysql_query=clients')">Products for the Company</button> </td>
+<td class = "table_information"> <button onclick = "accessPageInfo('','','?mysql_query=tracker')">Website Tracker</button> </td>
 
 
         
@@ -67,7 +82,8 @@ function accessPageInfo(id,url,search_query){
 
 
 <div id = "display_section">
-    
+    <table><tr><td>Select Query</td><td>Insert Query</td></tr></table>
+
 </div>`)})
 
 module.exports.handler = serverless(app)
