@@ -39,6 +39,12 @@ var conn = mysql.createConnection(config)
     <label>Synonyms for your Business</label>    
 <input class = "hiring-inputs" name = "synonyms" placeholder = "Describe your business in synonyms(ex. metalworking, labor, teaching, etc.)..."/>
     <label>Location</label>    
+    <input class = "hiring-inputs" name = "description" placeholder = "Describe your business"/>
+    <label>Description</label>    
+    <input class = "hiring-inputs" name = "primary_font" placeholder = "What is your primary font"/>
+    <label>Primary Font</label>    
+     <input class = "hiring-inputs" name = "secondary_font" placeholder = "What is your secondary font"/>
+    <label>Secondary Font</label>  
 <input class = "hiring-inputs"  name = "location" placeholder = "Where is your business located"/>
     <label>Number of Vertical Sections</label>    
 <input class = "hiring-inputs" name = "vertical_sections" placeholder = "How many vertical sections do you want the page to be divided into"/>
