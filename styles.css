@@ -362,14 +362,13 @@ circle{fill:white}
 
 .hiring-inputs{
   display:block;
-  border-style: none;
     border-bottom-style: solid;
     border-bottom-color: black;
     border-width:1px;
-    color: white;
+    color: black;
     height: 40px;
     width: 200px;}
-.hiring-inputs::placeholder{color:black}
+.hiring-inputs::placeholder{color:gray}
 .hiring-label{
   text-align:left
 }
