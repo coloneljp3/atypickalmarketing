@@ -11,7 +11,7 @@ var config = {username:"if0_39396345",password:"4tOjlR3DNfnec",database:"if0_393
 
 app.use('/',(req,res)=>{
 var request = req.query
-var first_name, last_name, project_name, paypal_email, paypal_password, clients_table_name,cookies_table_name, primary_font, secondary_font,title,age_of_business,synonyms, location,vertical_sections, horizontal_sections,description;
+var first_name, last_name, project_name, paypal_email, paypal_password, clients_table_name,cookies_table_name, primary_font, secondary_font,title,age_of_business,synonyms, location,vertical_sections, horizontal_sections,description,primary_color,secondary_color;
 
 first_name = request.first_name
 primary_color = request.primary_color
