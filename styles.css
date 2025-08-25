@@ -360,15 +360,18 @@ circle{fill:white}
 #special-offers{
 }
 
-.hiring-inputs{border-style: none;
-    background-color: transparent;
+.hiring-inputs{
+  text-align:center
+  display:block;
+  border-style: none;
     border-bottom-style: solid;
-    border-bottom-color: white;
+    border-bottom-color: black;
+    border-width:1px;
     color: white;
     height: 40px;
-    width: 400px;
+    width: 200px;
     font-size: 1.2em;}
-.hiring-inputs::placeholder{color:white}
+.hiring-inputs::placeholder{color:black}
 .hiring-label{
   text-align:left
 }
