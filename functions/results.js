@@ -8,6 +8,27 @@ const router = express.Router();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use('/',(req,res)=>{
+var request = req.body
+var first_name, last_name, project_name, paypal_email, paypal_password, clients_table_name,cookies_table_name, primary_font, secondary_font,title,age_of_business,synonyms, location,vertical_sections, horizontal_sections,description;
+
+first_name = request.first_name
+primary_color = request.primary_color
+secondary_color = request.secondary_color
+last_name = request.last_name
+project_name = request.project_name
+paypal_email = request.paypal_email
+paypal_password = request.paypal_password
+clients_table_name = request.clients_table_name
+cookies_table_name = request.cookies_table_name
+primary_font = request.primary_font
+secondary_font = request.secondary_font
+title = request.title
+age_of_business = request.age_of_business
+synonyms = request.synonyms
+location = request.location
+vertical_sections = request.vertical_sections
+horizontal_sections = request.horizontal_sections
+description = request.description
 res.send(`<style>
 #key_product_records,#key_password_accounts,#key_inventory_products,#key_name_records,#key_username_records,#key_date_records,#key_username_accounts,#key_pasword_accounts,#key_name_products,#key_price_products,#key_url_products,#key_inventory_products::placeholder{font-family:Raleway;
                                                                                                                                           }
@@ -205,6 +226,17 @@ elem.appendChild(row)
 </tr>
 </tbody></table>
 </div>
+<div>
+<h1 style = "font-family:`+primary_font+`">Template Page</h1>
+<iframe src = "/.netlify/functions/template?first_name=`+first_name+`&primary_color=`+primary_color+`&secondary_color=`+secondary_color+`&last_name=`+last_name+`&project_name=`+project_name+`&paypal_email=`+paypal_email+`&paypal_password=`+paypal_password+`&clients_table_name=`+clients_table_name+`&cookies_table_name=`+cookies_table_name+`&primary_font=`+primary_font+`&secondary_font=`+secondary_font+`&title=`+title+`&age_of_business=`+age_of_business+`&synonyms=`+synonyms+`&location=`+location+`&vertical_sections=`+vertical_sections+`&horizontal_sections=`+horizontal_sections+`&description=`+description+`">
+</div>
+
+<div>
+<h1 style = "font-family:`+primary_font+`">Eccommerce Template Page</h1>
+<iframe src = "/.netlify/functions/payment">
+
+</div>
+
 </body>`)})
 
 app.use('/.netlify/functions/results',router)
