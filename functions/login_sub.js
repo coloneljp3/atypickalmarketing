@@ -12,7 +12,7 @@ app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
-   res.send(`<link href = "/styles.css" rel = "stylesheet"/>
+   res.send(`<link href = "/styles.css" rel = "stylesheet"/><style>label{font-family:Verdana}</style>
 <form action = "/.netlify/functions/results" method = "POST">
 <label>Owner's First Name</label>    
 <input class = "hiring-inputs" name = "first_name" placeholder = "Type in your first name" />
