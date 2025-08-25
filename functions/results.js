@@ -194,12 +194,14 @@ elem.appendChild(row)
 </tbody></table></div>
 
 <div class="table_container">
-<div id="pseudo_form_records">
-<input id="key_username_records" name="username" placeholder="Type in the username you want">
-<input id="key_product_records" name="product" placeholder="Tpye in the product you want">
-<input id="key_date_records" name="date" placeholder="Type in the date you want">
-<button class="updateButton" onclick="updateRecords('records_table','add')">Add</button>
-</div><h1 class="table_heading">Products</h1>
+<div id="pseudo_form_products">
+<input id="key_url_products" name="url" placeholder="Type in the url you want">
+<input id="key_price_products" name="price" placeholder="Type in the price you want">
+<input id="key_name_products" name="name" placeholder="Type in the name you want">
+<input id="key_inventory_products" name="inventory" placeholder="Type in the inventory you want(number)">
+<button onclick="updateProducts('products_table','add')" class="updateButton">Add</button>
+</div>
+<h1 class="table_heading">Products</h1>
 <table id="products_table" class="table">
 <tbody><tr class="table_row">
 <td class="table_data">Name</td>
@@ -213,13 +215,13 @@ elem.appendChild(row)
 </div>
 
 <div class="table_container">
-<div id="pseudo_form_products">
-<input id="key_url_products" name="url" placeholder="Type in the url you want">
-<input id="key_price_products" name="price" placeholder="Type in the price you want">
-<input id="key_name_products" name="name" placeholder="Type in the name you want">
-<input id="key_inventory_products" name="inventory" placeholder="Type in the inventory you want(number)">
-<button onclick="updateProducts('products_table','add')" class="updateButton">Add</button>
-</div><h1 class="table_heading">Records</h1>
+<div id="pseudo_form_records">
+<input id="key_username_records" name="username" placeholder="Type in the username you want">
+<input id="key_product_records" name="product" placeholder="Tpye in the product you want">
+<input id="key_date_records" name="date" placeholder="Type in the date you want">
+<button class="updateButton" onclick="updateRecords('records_table','add')">Add</button>
+</div>
+<h1 class="table_heading">Records</h1>
 <table id="records_table" class="table">
 <tbody><tr class="table_row">
 <td class="table_data">Username</td>
