@@ -29,7 +29,10 @@ location = request.location
 vertical_sections = request.vertical_sections
 horizontal_sections = request.horizontal_sections
 description = request.description
-res.send(`<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@7f00..700&amp;family=Raleway:ital,wght@1,200&amp;display=swap" rel="stylesheet"><style>
+res.send(`<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&amp;family=Raleway:ital,wght@1,200&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@7f00..700&amp;family=Raleway:ital,wght@1,200&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><style>
 #key_product_records,#key_password_accounts,#key_inventory_products,#key_name_records,#key_username_records,#key_date_records,#key_username_accounts,#key_pasword_accounts,#key_name_products,#key_price_products,#key_url_products,#key_inventory_products::placeholder{font-family:Raleway;
                                                                                                                                           }
 
@@ -227,15 +230,17 @@ elem.appendChild(row)
 </tbody></table>
 </div>
 <div>
-<h1 style = "font-family:`+primary_font+`">Template Page</h1>
-<iframe src = "/.netlify/functions/template?first_name=`+first_name+`&primary_color=`+primary_color+`&secondary_color=`+secondary_color+`&last_name=`+last_name+`&project_name=`+project_name+`&paypal_email=`+paypal_email+`&paypal_password=`+paypal_password+`&clients_table_name=`+clients_table_name+`&cookies_table_name=`+cookies_table_name+`&primary_font=`+primary_font+`&secondary_font=`+secondary_font+`&title=`+title+`&age_of_business=`+age_of_business+`&synonyms=`+synonyms+`&location=`+location+`&vertical_sections=`+vertical_sections+`&horizontal_sections=`+horizontal_sections+`&description=`+description+`">
-</div>
+<h1 style = "font-family:Raleway">Eccommerce Template Page</h1>
+<iframe src = "/.netlify/functions/payment"></iframe>
 
+</div>
 <div>
-<h1 style = "font-family:`+primary_font+`">Eccommerce Template Page</h1>
-<iframe src = "/.netlify/functions/payment">
-
+<h1 style = "font-family:Raleway">Template Page</h1>
+<iframe src = "/.netlify/functions/template?first_name=`+first_name+`&primary_color=`+primary_color+`&secondary_color=`+secondary_color+`&last_name=`+last_name+`&project_name=`+project_name+`&paypal_email=`+paypal_email+`&paypal_password=`+paypal_password+`&clients_table_name=`+clients_table_name+`&cookies_table_name=`+cookies_table_name+`&primary_font=`+primary_font+`&secondary_font=`+secondary_font+`&title=`+title+`&age_of_business=`+age_of_business+`&synonyms=`+synonyms+`&location=`+location+`&vertical_sections=`+vertical_sections+`&horizontal_sections=`+horizontal_sections+`&description=`+description+`">
+</iframe>
 </div>
+
+
 
 </body>`)})
 
