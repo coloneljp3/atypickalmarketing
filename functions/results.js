@@ -29,7 +29,7 @@ location = request.location
 vertical_sections = request.vertical_sections
 horizontal_sections = request.horizontal_sections
 description = request.description
-res.send(`<style>
+res.send(`<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@7f00..700&amp;family=Raleway:ital,wght@1,200&amp;display=swap" rel="stylesheet"><style>
 #key_product_records,#key_password_accounts,#key_inventory_products,#key_name_records,#key_username_records,#key_date_records,#key_username_accounts,#key_pasword_accounts,#key_name_products,#key_price_products,#key_url_products,#key_inventory_products::placeholder{font-family:Raleway;
                                                                                                                                           }
 
