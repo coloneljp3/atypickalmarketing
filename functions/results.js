@@ -233,7 +233,7 @@ elem.appendChild(row)
 </div>
 <div>
 <h1 style = "font-family:Raleway">Eccommerce Template Page</h1>
-<iframe style="height:800px;width:100%" src = "/.netlify/functions/payment"></iframe>
+<iframe style="height:800px;width:100%" src = "https://childrensshoppe.netlify.app/products"></iframe>
 
 </div>
 <div>
