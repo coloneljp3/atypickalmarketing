@@ -238,7 +238,7 @@ elem.appendChild(row)
 </div>
 <div>
 <h1 style = "font-family:Raleway">Template Page</h1>
-<iframe style="height:800px;width:100%" src = "/.netlify/functions/template?first_name=`+first_name+`&primary_color=`+primary_color+`&secondary_color=`+secondary_color+`&last_name=`+last_name+`&project_name=`+project_name+`&paypal_email=`+paypal_email+`&paypal_password=`+paypal_password+`&clients_table_name=`+clients_table_name+`&cookies_table_name=`+cookies_table_name+`&primary_font=`+primary_font+`&secondary_font=`+secondary_font+`&title=`+title+`&age_of_business=`+age_of_business+`&synonyms=`+synonyms+`&location=`+location+`&vertical_sections=`+vertical_sections+`&horizontal_sections=`+horizontal_sections+`&description=`+description+`">
+<iframe style="height:800px;width:100%" src = "https://childrensshoppe.netlify.app/home">
 </iframe>
 </div>
 
