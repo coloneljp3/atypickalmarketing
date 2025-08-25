@@ -361,7 +361,6 @@ circle{fill:white}
 }
 
 .hiring-inputs{
-  text-align:center
   display:block;
   border-style: none;
     border-bottom-style: solid;
@@ -369,8 +368,7 @@ circle{fill:white}
     border-width:1px;
     color: white;
     height: 40px;
-    width: 200px;
-    font-size: 1.2em;}
+    width: 200px;}
 .hiring-inputs::placeholder{color:black}
 .hiring-label{
   text-align:left
