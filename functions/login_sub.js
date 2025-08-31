@@ -13,7 +13,7 @@ var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
    res.send(`<link href = "/styles.css" rel = "stylesheet"/><style>label{font-family:Verdana}</style>
-<form onsubmit = "window.alert('New template created')"style = "width:100%;text-align:center" action = "/.netlify/functions/results" method = "POST">
+<form onsubmit = "window.alert('New template created')"style = "width:100%;text-align:center" action = "/action.php" method = "POST">
 <label>Owner's First Name</label>    
 <input style = "display:block;width:200px;margin:auto;text-align:center" class = "hiring-inputs" name = "first_name" placeholder = "Type in your first name" />
 <label>Owner's Last Name</label>    
