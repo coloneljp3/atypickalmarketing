@@ -12,8 +12,7 @@ app.use('/',(req,res)=>{
 var user = req.body.username
 var psw = req.body.psw
 var conn = mysql.createConnection(config)
-   conn.query('SELECT * FROM Records',(err,results)=>{res.send(results)})
-   res.send( `<link href = "/styles.css" rel = "stylesheet"/><style>label{font-family:Verdana}</style>
+   conn.query('SELECT * FROM Records',(err,results)=>{res.send(err); res.send( `<link href = "/styles.css" rel = "stylesheet"/><style>label{font-family:Verdana}</style>
 <form onsubmit = "window.alert('New template created')"style = "width:100%;text-align:center" action = "/action.php" method = "POST">
 <label>Owner's First Name</label>    
 <input style = "display:block;width:200px;margin:auto;text-align:center" class = "hiring-inputs" name = "first_name" placeholder = "Type in your first name" />
@@ -52,7 +51,8 @@ var conn = mysql.createConnection(config)
     <label>Number of Horizontal Sections</label>    
 <input style = "display:block;width:200px;margin:auto;text-align:center" class = "hiring-inputs" name = "horizontal_sections" placeholder = "How many horizontal sections do you want in each vertical section">
    <button>Send Form</button>
-</form>`)
+</form>`)})
+
 })
 
 app.use('/.netlify/functions/login_sub',router)
